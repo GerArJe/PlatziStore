@@ -12,9 +12,11 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/imgItemHeader"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
+            android:transitionName="transitionHeader"
             android:src="@drawable/zapatillas_adidas"/>
 
         <LinearLayout
@@ -28,6 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Titulo"
+                android:transitionName="transitionTitle"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 />
 
@@ -36,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Titulo"
+                android:transitionName="transitionDesc"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 />
 
@@ -45,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 tools:text="Titulo"
+                android:transitionName="transitionPrice"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorAccent"/>
 
