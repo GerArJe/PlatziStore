@@ -20,7 +20,7 @@ class AdapterLanding (val data:List<ItemLanding>):RecyclerView.Adapter<AdapterLa
             with(itemLanding){
                 itemView.txtTitleItem.text = title
                 itemView.txtDescItem.text = desc
-                itemView.txtPriceItem.text = "${String.format("%.2f", price)}"
+                itemView.txtPriceItem.text = "$ ${String.format("%.2f", price)}"
             }
         }
     }
