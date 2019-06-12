@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.content_description.*
 import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.startActivity
 
+
 class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
