@@ -40,10 +40,11 @@ class ShopCartActivity : AppCompatActivity() {
                     Log.e("VALUE", this.getString(1) ?: "")
                     Log.e("VALUE", this.getString(2) ?: "")
                     Log.e("VALUE", "${this.getDouble(3)}")
+                    Log.e("VALUE", this.getString(4) ?: "")
 
                     items.add(ItemLanding(this.getString(1) ?: "",
                         this.getString(2) ?: "",
-                        this.getDouble(3)))
+                        this.getDouble(3), this.getString(4)))
                     adapter.notifyDataSetChanged()
                 } while (this.moveToNext())
             }

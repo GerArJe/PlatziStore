@@ -22,8 +22,9 @@ class DBOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "PlatziStore", n
         val name = "name" to TEXT
         val desc = "Desc" to TEXT
         val price = "price" to REAL
+        val url = "url" to TEXT
 
-        db?.createTable("Productos", true, id, name, desc, price)
+        db?.createTable("Productos", true, id, name, desc, price, url)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
