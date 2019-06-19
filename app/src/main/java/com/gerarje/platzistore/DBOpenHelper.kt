@@ -3,8 +3,10 @@ package com.gerarje.platzistore
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import org.jetbrains.anko.db.*
+import retrofit2.http.Url
+import java.net.URL
 
-class DBOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "PlatziStore", null, 1) {
+class DBOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "PlatziStore", null, 4) {
 
     companion object{
         private var instance:DBOpenHelper? = null
@@ -23,6 +25,7 @@ class DBOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "PlatziStore", n
         val desc = "Desc" to TEXT
         val price = "price" to REAL
         val url = "url" to TEXT
+
 
         db?.createTable("Productos", true, id, name, desc, price, url)
     }

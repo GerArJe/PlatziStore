@@ -3,6 +3,7 @@ package com.gerarje.platzistore
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_landing.view.*
 
 class AdapterShopCart (val data: List<ItemLanding>) : RecyclerView.Adapter<AdapterShopCart.Holder>() {
@@ -21,6 +22,7 @@ class AdapterShopCart (val data: List<ItemLanding>) : RecyclerView.Adapter<Adapt
                 itemView.txtTitleItem.text = title
                 itemView.txtDescItem.text = desc
                 itemView.txtPriceItem.text = "$ ${String.format("%.2f", price)}"
+                Glide.with(itemView.context).load(urlImage).into(itemView.imgItemHeader)
             }
         }
     }

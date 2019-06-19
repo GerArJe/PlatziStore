@@ -39,6 +39,7 @@ class AdapterLanding(val data: List<ItemLanding?>?) : RecyclerView.Adapter<Adapt
                         intent.putExtra("title", title)
                         intent.putExtra("desc", desc)
                         intent.putExtra("price", price)
+                        intent.putExtra("url", urlImage)
 
                         val p1: Pair<View, String> = Pair.create(itemView.imgItemHeader, "transitionHeader")
                         val p2: Pair<View, String> = Pair.create(itemView.txtTitleItem, "transitionTitle")
